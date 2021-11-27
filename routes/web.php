@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('forladies', 'App\Http\Controllers\ForladiesController@top');
+
+Route::get('register', 'App\Http\Controllers\RegisterController@register');
+Route::post('register', 'App\Http\Controllers\RegisterController@newuser');
+
+Route::get('login', 'App\Http\Controllers\LoginController@login');
+Route::post('login', 'App\Http\Controllers\LoginController@mypage');
