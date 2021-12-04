@@ -12,7 +12,7 @@ class LoginController extends Controller
         return view('forladies.login');
     }
 
-    public function mypage(LoginRequest $request)
+    public function store(LoginRequest $request)
     {
         return redirect('login');
     }

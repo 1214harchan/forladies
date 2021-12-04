@@ -47,8 +47,6 @@
     </div>
     @endsection
       @section('footervalue')
-      @include('common.footer',['url'=> route('forladies')])
+      @include('common.footer',['url'=> route('/')])
       <footer class="footer" data-background-color="black">
-      <div class=" container ">
-      <a href="forladies">トップに戻る</a>
       @endsection

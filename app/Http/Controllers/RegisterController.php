@@ -7,12 +7,12 @@ use App\Http\Requests\RegisterRequest;
 
 class RegisterController extends Controller
 {
-    public function register()
+    public function show()
     {
         return view('forladies.register');
     }
 
-    public function newuser(RegisterRequest $request){ 
+    public function store(RegisterRequest $request){ 
 
         return redirect('register');
     }

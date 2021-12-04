@@ -35,7 +35,8 @@
           <tr><th>・相手の出会いの目的:</th><td>友達募集、恋人募集</td></tr>
           <tr><th>・相手の子供の有無:</th><td>一緒には住みたくない</td></tr>
           <tr><th><img src="C:\xampp\htdocs\forladies\now-ui-kit-master\assets\img\julie.jpg"></td></tr>
-          <a href="createmessage">メッセージ送信</a></table> 
+          </table> 
+          <a href="createmessage">メッセージ送信</a>
     </div> 
    <footer class="footer" data-background-color="black">
       <div class=" container ">

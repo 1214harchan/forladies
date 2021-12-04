@@ -14,15 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('forladies.index');
 });
 
-//Route::get('forladies', 'App\Http\Controllers\ForladiesController@top');
+Route::get('register', 'App\Http\Controllers\RegisterController@show');
+Route::post('register', 'App\Http\Controllers\RegisterController@store')->name("newuser");
 
-Route::get('forladies', 'App\Http\Controllers\ForladiesController@top')->name("forladies");
-
-Route::get('register', 'App\Http\Controllers\RegisterController@register');
-Route::post('register', 'App\Http\Controllers\RegisterController@newuser')->name("newuser");
-
-Route::get('login', 'App\Http\Controllers\LoginController@login');
-Route::post('login', 'App\Http\Controllers\LoginController@mypage')->name("mypage");
+Route::get('login', 'App\Http\Controllers\LoginController@show');
+Route::post('login', 'App\Http\Controllers\LoginController@store')->name("mypage");
