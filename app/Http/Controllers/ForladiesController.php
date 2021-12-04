@@ -8,6 +8,7 @@ class ForladiesController extends Controller
 {
     public function top()
     {
-        return view('forladies.index');
+        //return view('forladies.index');
+        return view('forladies.profileedit');
     }
 }

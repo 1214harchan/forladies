@@ -14,6 +14,8 @@ class LoginController extends Controller
 
     public function mypage(LoginRequest $request)
     {
-        return view('forladies.mypage');
+        return redirect('login');
     }
 }
+
+//メソッド名・・・ページ表示:show,登録:storeの方がわかりやすい

@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('forladies', 'App\Http\Controllers\ForladiesController@top');
+//Route::get('forladies', 'App\Http\Controllers\ForladiesController@top');
 
-// Route::get('/edit', 'SupplierController@edit')->name("edit");
+Route::get('forladies', 'App\Http\Controllers\ForladiesController@top')->name("forladies");
 
 Route::get('register', 'App\Http\Controllers\RegisterController@register');
 Route::post('register', 'App\Http\Controllers\RegisterController@newuser')->name("newuser");
