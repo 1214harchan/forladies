@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
 {
@@ -11,13 +12,8 @@ class LoginController extends Controller
         return view('forladies.login');
     }
 
-    public function mypage(Request $request)
+    public function mypage(LoginRequest $request)
     {
-        $validate_rule = [
-            'id' => 'integer',
-            'password' => 'required|alpha_dash|min:8',
-        ];
-        $this->validate($request, $validate_rule);
         return view('forladies.mypage');
     }
 }

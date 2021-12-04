@@ -19,6 +19,7 @@ class RegisterRequest extends FormRequest
         }else{
             return false;
         }
+        return true;
     }
 
     /**
@@ -41,11 +42,11 @@ class RegisterRequest extends FormRequest
             'mail.email' => 'メールアドレスの形式で入力して下さい。',
             'password.required' => 'パスワードを入力して下さい。',
             'password.alpha_dash' => 'パスワードは半角英数字で入力して下さい。',
-            'password.min:8' => 'パスワードは8文字以上で入力して下さい。',
+            'password.min' => 'パスワードは8文字以上で入力して下さい。',
             'password.confirmed' => 'パスワードとパスワード(確認用)が一致していません。',
             'password_confirmation.required' => 'パスワード(確認用)を入力して下さい。',
             'password_confirmation.alpha_dash' => 'パスワード(確認用)は半角英数字で入力して下さい。',
-            'password_confirmation.min:8' => 'パスワード(確認用)は8文字以上で入力して下さい。',
+            'password_confirmation.min' => 'パスワード(確認用)は8文字以上で入力して下さい。',
         ];
     }
 }

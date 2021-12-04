@@ -19,8 +19,10 @@ Route::get('/', function () {
 
 Route::get('forladies', 'App\Http\Controllers\ForladiesController@top');
 
+// Route::get('/edit', 'SupplierController@edit')->name("edit");
+
 Route::get('register', 'App\Http\Controllers\RegisterController@register');
-Route::post('register', 'App\Http\Controllers\RegisterController@newuser');
+Route::post('register', 'App\Http\Controllers\RegisterController@newuser')->name("newuser");
 
 Route::get('login', 'App\Http\Controllers\LoginController@login');
-Route::post('login', 'App\Http\Controllers\LoginController@mypage');
+Route::post('login', 'App\Http\Controllers\LoginController@mypage')->name("mypage");
