@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 class ForladiesController extends Controller
 {
-    public function top()
+    public function show()
     {
-        //return view('forladies.index');
-        return view('forladies.profileedit');
+        return view('forladies.index');
+    
     }
 }

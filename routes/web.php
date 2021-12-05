@@ -17,6 +17,8 @@ Route::get('/', function () {
     return view('forladies.index');
 });
 
+Route::get('forladies', 'App\Http\Controllers\ForladiesController@show');
+
 Route::get('register', 'App\Http\Controllers\RegisterController@show');
 Route::post('register', 'App\Http\Controllers\RegisterController@store')->name("newuser");
 
