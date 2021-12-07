@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('forladies.index');
-});
+})->name('/');
 
 Route::get('forladies', 'App\Http\Controllers\ForladiesController@show');
 
