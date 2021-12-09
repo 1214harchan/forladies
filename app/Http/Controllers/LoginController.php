@@ -7,7 +7,7 @@ use App\Http\Requests\LoginRequest;
 
 class LoginController extends Controller
 {
-    public function login()
+    public function show()
     {
         return view('forladies.login');
     }
