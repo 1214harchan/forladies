@@ -8,7 +8,7 @@ use App\Models\User;
 class UsersController extends Controller
 {
     public function index(Request $request){
-        $items = Users::all();
+        $items = User::all();
         return view('person.index', ['items' => $items]);
     }
 }

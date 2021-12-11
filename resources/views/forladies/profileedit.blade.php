@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="utf-8" />
-  <title>
-    フォーレディース/プロフィール編集
-  </title>
-</head>
-
-<body class="index-page sidebar-collapse">
-  <div class="wrapper">
-    <div class="page-header clear-filter" filter-color="green">
-      <div class="page-header-image" data-parallax="true" style="background-image:url('./assets/img/avatar.jpg');">
-      </div>
+@extends('common.content')
+      @section('title', '新規登録')
+      @section('content')
       <div class="container">
         <p>※*は必須入力</p>
-        <form action="" method="post">
-          <lavel>・名前*</lavel><input type="text" name="name" value="{{old('name')}}"><br>
-          <lavel>・生年月日*</lavel>
+        <form action="memberprofile" method="post">
+          <label>・名前*</label><input type="text" name="name" value="{{old('name')}}"><br>
+          <label>・生年月日*</label>
           <select name="birthyear">
             <option value="">選択して下さい</option>
             <option value="1980">1980</option>
@@ -58,71 +46,71 @@
             <option value="{{$i}}">{{$i}}</option>
             @endfor
           </select>日<br>
-          <lavel>・都道府県*</lavel>
+          <label>・都道府県*</label>
           <select name="address">
             <option value="">選択して下さい</option>
-            @foreach (config('const.common.Prefecture') as $key=>$value)
+            @foreach (config('const.common.PREFECTURE') as $key=>$value)
             <option value="{{$key}}">{{$value}}</option>
             @endforeach
           </select><br>
-          <lavel>・見た目</lavel>
+          <label>・見た目</label>
           <input type="radio" name="looks" value="boish">ボーイッシュ
           <input type="radio" name="looks" value="chusei">中性
           <input type="radio" name="looks" value="fem">フェム<br>
-          <lavel>・セク</lavel>
+          <label>・セク</label>
           <input type="radio" name="sexual" value="tachi">タチ
           <input type="radio" name="sexual" value="riva">リバ
           <input type="radio" name="sexual" value="neko">ネコ
-          <lavel>※タチ:攻め、リバ:両方、ネコ:受け</lavel><br>
-          <lavel>・喫煙の有無</lavel>
+          <label>※タチ:攻め、リバ:両方、ネコ:受け</label><br>
+          <label>・喫煙の有無</label>
           <input type="radio" name="cigarette" value="0">無
           <input type="radio" name="cigarette" value="1">有<br>
-          <lavel>・飲酒の有無</lavel>
+          <label>・飲酒の有無</label>
           <input type="radio" name="alchol" value="0">無
           <input type="radio" name="alchol" value="1">有<br>
-          <lavel>・婚姻の有無</lavel>
+          <label>・婚姻の有無</label>
           <input type="radio" name="marrige" value="single">未婚
           <input type="radio" name="marrige" value="marriged">既婚
           <input type="radio" name="marrige" value="divorced">離婚済み<br>
-          <lavel>・出会いの目的</lavel>
+          <label>・出会いの目的</label>
           <input type="checkbox" name="purpose" value="partner">恋人募集
           <input type="checkbox" name="purpose" value="friends">友達募集<br>
-          <lavel>・子供の有無</lavel>
+          <label>・子供の有無</label>
           <input type="radio" name="children" value="none">無
           <input type="radio" name="children" value="family">有(同居中)
           <input type="radio" name="children" value="independenced">有(別居中)<br>
           <input type="file"><br>
-          <lavel>＜相手への希望条件＞</lavel><br>
-          <lavel>・相手の年齢<input type="text" name="hopeminage">歳から<input type="text" name="hopemaxage">歳まで</lavel><br>
-          <lavel>・相手の都道府県</lavel>
+          <label>＜相手への希望条件＞</label><br>
+          <label>・相手の年齢<input type="text" name="hopeminage">歳から<input type="text" name="hopemaxage">歳まで</label><br>
+          <label>・相手の都道府県</label>
           <select name="hopeaddress" multiple>
             <!--const('const.common.PREFECTURE.'.$prefecture)-->
-            @foreach (config('const.common.Prefecture') as $key=>$value)
+            @foreach (config('const.common.PREFECTURE') as $key=>$value)
             <option value="{{$key}}">{{$value}}</option>
             @endforeach
           </select><br>
-          <lavel>・相手の見た目</lavel>
+          <label>・相手の見た目</label>
           <input type="checkbox" name="hopelooks[]" value="boish">ボーイッシュ
           <input type="checkbox" name="hopelooks[]" value="chusei">中性
           <input type="checkbox" name="hopelooks[]" value="fem">フェム<br>
-          <lavel>・相手のセク</lavel>
+          <label>・相手のセク</label>
           <input type="checkbox" name="hopesexual[]" value="tachi">タチ
           <input type="checkbox" name="hopesexual[]" value="riva">リバ
           <input type="checkbox" name="hopesexual[]" value="neko">ネコ
-          <lavel>・相手の喫煙の有無</lavel>
+          <label>・相手の喫煙の有無</label>
           <input type="checkbox" name="hopecigarette[]" value="0">無
           <input type="checkbox" name="hopecigarette[]" value="1">有<br>
-          <lavel>・相手の飲酒の有無</lavel>
+          <label>・相手の飲酒の有無</label>
           <input type="checkbox" name="hopealchol[]" value="0">無
           <input type="checkbox" name="hopealchol[]" value="1">有<br>
-          <lavel>・相手の婚姻の有無</lavel>
+          <label>・相手の婚姻の有無</label>
           <input type="checkbox" name="hopemarrige[]" value="single">未婚
           <input type="checkbox" name="hopemarrige[]" value="marriged">既婚
           <input type="checkbox" name="hopemarrige[]" value="divorced">離婚済み<br>
-          <lavel>・相手の出会いの目的</lavel>
+          <label>・相手の出会いの目的</label>
           <input type="checkbox" name="hopepurpose[]" value="partner">恋人募集
           <input type="checkbox" name="hopepurpose[]" value="friends">友達募集<br>
-          <lavel>・相手の子供の有無</lavel>
+          <label>・相手の子供の有無</label>
           <select name="hopechildren">
             <option value="">選択して下さい</option>
             <option value="noproblem">気にしない</option>
@@ -132,13 +120,8 @@
           <input type="submit" value="保存">
       </form>
       </div>
-    </div>
-   <footer>
-      <div>
-        <a href="mypage">マイページトップに戻る</a>
-      </div>
-    </footer>
-  </div>
-</body>
-
-</html>
+      @endsection
+      @section('footervalue')
+      @include('common.footer',['url'=> route('/')])
+      <footer class="footer" data-background-color="black">
+      @endsection

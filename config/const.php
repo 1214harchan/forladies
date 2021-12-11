@@ -1,7 +1,8 @@
 <?php
 
-return['common'=>[
-            'Prefecture'=>[
+return[
+    'common'=>[
+            'PREFECTURE'=>[
                 "hokkaido"=>'北海道',
                 "aomori"=>'青森県',
                 "iwate"=>'岩手県',
@@ -50,5 +51,6 @@ return['common'=>[
                 "kagoshima"=>'鹿児島県',
                 "okinawa"=>'沖縄県',
                 "abroad"=>'海外',
+                ]
             ]
-]];
+        ];
