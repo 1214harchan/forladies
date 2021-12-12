@@ -1,18 +1,7 @@
-@extends('layouts.userblade')
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-  <meta charset="utf-8" />
-  <title>
-    フォーレディース/会員プロフィール
-  </title>
-</head>
-
-<body>
-  <div>
-    <div>
-      <div>
+@extends('common.content')
+      @section('title', '会員プロフィール')
+      @section('content')
+      <div class="container">
         <p>A</p>
           <table>
           <tr><th>・年齢:</th><td>20歳</td></tr>
@@ -37,14 +26,8 @@
           <tr><th><img src="C:\xampp\htdocs\forladies\now-ui-kit-master\assets\img\julie.jpg"></td></tr>
           </table> 
           <a href="createmessage">メッセージ送信</a>
-    </div> 
-   <footer class="footer" data-background-color="black">
-      <div class=" container ">
-        <a href="members">会員一覧に戻る</a><br>
-        <a href="mypage">マイページトップに戻る</a>
-      </div>
-    </footer>
-  </div>
-</body>
-
-</html>
+          @endsection
+@section('footervalue')
+@include('common.footer',['url'=> route('/')])
+<footer class="footer" data-background-color="black">
+@endsection

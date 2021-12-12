@@ -24,3 +24,5 @@ Route::post('register', 'App\Http\Controllers\RegisterController@store')->name("
 
 Route::get('login', 'App\Http\Controllers\LoginController@show');
 Route::post('login', 'App\Http\Controllers\LoginController@store')->name("mypage");
+
+Route::get('user', 'App\Http\Controllers\UsersController@show');

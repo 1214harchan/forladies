@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\RegisterRequest;
+use App\Models\User;
 
 class RegisterController extends Controller
 {
@@ -12,10 +12,12 @@ class RegisterController extends Controller
         return view('forladies.register');
     }
 
-    public function store(RegisterRequest $request){ 
-
-        return redirect('register');
+    public function store(Request $request){ 
+        $this->validate($request, User::$rules);
+        $users = new User;
+        $form = $request->all();
+        unset($form['_token']);
+        $users->fill($form)->save();
+        return redirect('newuser');
     }
 }
-
-//メソッド名・・・ページ表示:show,登録:storeの方がわかりやすい

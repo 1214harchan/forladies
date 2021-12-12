@@ -41,4 +41,6 @@ class CustomValidator extends Validator
     {
         return (preg_match("/^[a-z0-9]+$/i", $value));
     }
+    /*無名関数の場合はuseを使用
+    18歳以上/未満*/
 }

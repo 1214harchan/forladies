@@ -7,8 +7,8 @@ use App\Models\User;
 
 class UsersController extends Controller
 {
-    public function index(Request $request){
+    public function show(Request $request){
         $items = User::all();
-        return view('person.index', ['items' => $items]);
+        return view('forladies.members', ['items' => $items]);
     }
 }
