@@ -18,6 +18,7 @@ class RegisterController extends Controller
         $form = $request->all();
         unset($form['_token']);
         $users->fill($form)->save();
-        return redirect('newuser');
+        $id = $users->id; 
+        return view('forladies.newuser',['id' => $id]);
     }
 }
